@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/red_wool",
+  "overrides": [
+    { "predicate": { "custom_model_data": 1888 }, "model": "minecraft:item/phone_back" }
+  ]
+}
