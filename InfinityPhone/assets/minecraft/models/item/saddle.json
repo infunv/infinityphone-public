@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "item/saddle"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1888
+      },
+      "model": "item/infinityphone_model"
+    }
+  ]
+}

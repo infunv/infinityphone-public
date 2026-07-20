@@ -1,0 +1,66 @@
+===============================================================================
+               INFINITYPHONES SOFTWARE & ASSETS LICENSE (EULA)
+                      Version 1.0 (Proprietary / Dual-Core)
+===============================================================================
+
+Copyright (c) 2026 InfinityUniverse & CristaferWhite. All rights reserved.
+Official Public Resource Pack Repository: github.com/infunv/infinityphone-public
+
+This License governs the use of two distinct components of the InfinityPhones 
+project: the compiled Java Program (.jar binary) and the digital assets 
+(Resource Pack containing 3D models, JSON configurations, and textures).
+
+By installing, downloading, or using any part of this project, you agree to 
+be bound by the terms below.
+
+-------------------------------------------------------------------------------
+SECTION A: THE PROGRAM (Java Binary / .jar)
+-------------------------------------------------------------------------------
+1. PROPRIETARY & CLOSED SOURCE
+   - The source code of the InfinityPhones plugin is completely proprietary 
+     and PRIVATE. No open access, viewing, or editing rights are granted.
+   - You are granted a license to run the compiled .jar binary solely for 
+     personal or public non-commercial Minecraft server operations.
+
+2. REVERSE ENGINEERING PROHIBITION
+   - You MAY NOT decompile, disassemble, reverse engineer, modify, or attempt 
+     to derive the source code from the compiled .jar binary under any 
+     circumstances.
+
+3. DISTRIBUTION RESTRICTIONS
+   - You MAY NOT redistribute, re-upload, leak, lease, sell, or sub-license 
+     the .jar binary to any third party or platform (e.g., SpigotMC, forums).
+
+-------------------------------------------------------------------------------
+SECTION B: THE ASSETS (Resource Pack / 3D Models / Textures)
+-------------------------------------------------------------------------------
+1. PUBLIC ACCESS & LIMITED USE
+   - The Resource Pack files hosted at 'infunv/infinityphone-public' and Modrinth 
+     are open for public download, client-side installation, and integration 
+     via server resource-pack systems.
+   - You are allowed to inspect and use the Resource Pack files to ensure 
+     compatibility with your own server environment.
+
+2. NON-COMMERCIAL & DERIVATIVE RESTRICTIONS
+   - You MAY NOT sell, monetize, or use the 3D models, JSON configs, or 
+     textures for any commercial server features or paid store elements.
+   - You MAY NOT extract the 3D models or textures to use them in standalone 
+     packs or projects not explicitly tied to the InfinityPhones plugin.
+
+-------------------------------------------------------------------------------
+SECTION C: GENERAL TERMS (Applies to both Program and Assets)
+-------------------------------------------------------------------------------
+1. TERMINATION
+   - Any breach of Section A or Section B automatically terminates your rights 
+     under this license. Upon termination, you must immediately delete all 
+     copies of the Program and Assets.
+
+2. WARRANTY DISCLAIMER
+   THE SOFTWARE AND ASSETS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+   IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIMS, DAMAGES, OR LOSSES 
+   ARISING FROM THE USE OF THIS PROJECT.
+
+===============================================================================
+For commercial licensing inquiries or permissions, contact the authors via 
+official repository issue tracker or internal support channels.
+===============================================================================

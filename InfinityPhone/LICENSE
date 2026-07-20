@@ -1,0 +1,55 @@
+===============================================================================
+                       INFINITYPHONES SOFTWARE LICENSE
+                     Version 1.0 (Non-Commercial Open Source)
+===============================================================================
+
+Copyright (c) 2026 INFUNV & CristaferWhite. All rights reserved.
+Official Repository: https://github.com/infunv/infinityphone-public
+
+This Software (including source code, compiled binaries, assets, and 
+documentation) is protected by copyright law and international treaties.
+By accessing, downloading, or using this Software, you agree to be bound 
+by the terms and conditions of this License.
+
+1. PERMITTED USE & OPEN ACCESS
+   - You are granted a limited, non-exclusive, non-transferable license to 
+     download, inspect, compile, and run the Software for personal, 
+     educational, and non-commercial purposes.
+   - You may use the Software on your own private or public Minecraft servers, 
+     provided that the access to the server's phone features is completely free 
+     for players and generates no commercial revenue.
+
+2. COMMERCIAL RESTRICTIONS
+   - You MAY NOT use this Software, or any portion of its source code, for 
+     commercial purposes, including but not limited to: selling the plugin, 
+     monetizing phone features via in-game stores (donations/donator ranks), 
+     or bundling it within commercial server setups without prior written 
+     permission from the copyright holders.
+
+3. DISTRIBUTION & REDISTRIBUTION
+   - Official distribution channels are strictly limited to GitHub 
+     (infunv/infinityphone-public) and official Modrinth pages managed by the authors.
+   - You MAY NOT re-upload, host, or redistribute the binaries (.jar files) or 
+     modified source code of this Software on third-party platforms, forums, 
+     or file-sharing websites.
+
+4. MODIFICATIONS & FORKS
+   - You may fork the public repository and modify the source code for private, 
+     non-commercial use on your own server.
+   - You MAY NOT disclose, share, publish, or distribute modified versions of 
+     the source code to any third party as a standalone project or under a 
+     different name.
+
+5. DISCLAIMER OF WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+   SOFTWARE.
+
+===============================================================================
+For commercial inquiries or special permissions, contact the authors via the 
+official repository issue tracker or internal support channels.
+===============================================================================
