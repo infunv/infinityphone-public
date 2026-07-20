@@ -1,0 +1,36 @@
+name: InfinityPhone
+main: ru.infunv.Main
+version: '${version}'
+api-version: "1.14"
+author: ['whitecristafer','INFUNV']
+softdepend: [ Vault ]
+commands:
+  phone:
+    description: Main phone command
+    usage: /phone
+    permission: infinityphone.admin
+    permission-message: §cYou do not have permission to use this command!
+  contact:
+    description: Add contact
+    usage: /contact
+  call:
+    description: Call Player
+    usage: /call
+  quit:
+    description: Exit from talking
+    usage: /quit
+  msg:
+    description: Send a private message
+    usage: /msg <number> <message> or /msg <contact name> <message>
+  accept:
+    description: Accept an incoming call.
+    usage: /accept
+  cancel:
+    description: Cancel an ongoing or incoming call.
+    usage: /cancel
+  block:
+    description: Block player
+    usage: /accept
+  unblock:
+    description: Unblock player
+    usage: /unblock

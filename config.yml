@@ -1,0 +1,179 @@
+# =================================================================================
+#                      INFINITYPHONES CONFIGURATION FILE (config.yml)
+#                                     Version: 1.3.0
+# =================================================================================
+#
+# # EULA & LICENSE NOTICE
+#
+# This software program and its assets are protected by copyright law.
+# By installing, running, or configuring this plugin, you agree to the EULA:
+#
+# 1. THE PROGRAM (Java Binary / .jar):
+#    - The compiled Java program is strictly PROPRIETARY and CLOSED SOURCE.
+#    - You are permitted to run the .jar binary on your server for personal
+#      or public non-commercial Minecraft server operations.
+#    - Reverse engineering, decompiling, or modifying the binary is PROHIBITED.
+#    - Distribution, resale, or sub-licensing of the binary is strictly FORBIDDEN.
+#
+# 2. THE ASSETS (Resource Pack / 3D Models / Textures):
+#    - The resource pack is hosted publicly (github.com/infunv/infinityphone-public)
+#      for server-side integration.
+#    - Commercial monetization, sale of models, or extraction for unrelated packs
+#      is strictly PROHIBITED.
+#
+# For commercial licensing requests, contact: contact@infunv.ru
+#
+# =================================================================================
+# QUICK START & PLAYERS TUTORIAL
+#
+# STEP 1: How to get your Smartphone
+#   - Admins can give a smartphone using: /phone give [player]
+#   - Or get one for themselves using: /phone give
+#   - To remove a phone from yourself or a player, use: /phone remove [player]
+#
+# STEP 2: Opening the Interface
+#   - Hold the Smartphone in your main hand and click Right-Click (RMB) or Left-Click (LMB).
+#   - This opens the main smartphone GUI menu.
+#
+# STEP 3: Checking your Phone Number
+#   - In the main menu, hover over the Player Head in the center.
+#   - It shows your unique, automatically generated phone number.
+#   - You can click on the head to copy your number to the clipboard!
+#
+# STEP 4: Managing your Address Book (Phone Book)
+#   - Click on the Bookshelf icon ("Phone Book") to view your contacts list.
+#   - To add a contact, type in chat: /contact <number>
+#   - You will see the contact added to your books!
+#   - To block a player (blacklist them), use: /block <number|nickname>
+#   - To unblock them, use: /unblock <number|nickname>
+#
+# STEP 5: Placing Calls
+#   - Open a contact's profile in the Phone Book and click the Emerald Block ("Start Call").
+#   - Or execute: /call <number|nickname>
+#   - The recipient will receive an incoming call alert.
+#   - To answer, the recipient must type: /accept
+#   - To decline, the recipient must type: /cancel
+#   - To end an active call, either player can type: /quit (or click Redstone in GUI).
+#
+# STEP 6: Sending Messages (SMS)
+#   - Type: /msg <number|nickname> <text message>
+#   - The recipient will instantly receive your SMS with a custom format.
+#
+# =================================================================================
+# Placeholders
+#
+# {prefix} - Plugin prefix
+# {playernick} - Player name/nickname
+# {playernumber} - Player's phone number
+# {contactnumber} - Target contact's phone number
+# {contactname} - Target contact's name
+# {number} - General placeholder for number/name
+# {message} - SMS message text
+# {money} - Cost formatted as currency
+#
+# =================================================================================
+
+version: 1.3.0
+
+prefix: '<gradient:#908DC2:#A5A2CB>InfinityPhones</gradient> <color:#6272A4>»</color>'
+
+messages:
+  version:
+    - ''
+    - '<color:#DEE2E6>Plugin information for <gradient:#908DC2:#A5A2CB>{pluginname}</gradient>:</color>'
+    - ''
+    - '<color:#DEE2E6>Plugin version: <gradient:#908DC2:#A5A2CB>{pluginversion}</gradient></color>'
+    - '<color:#DEE2E6>config.yml version: <gradient:#908DC2:#A5A2CB>{configversion}</gradient></color>'
+    - '<color:#DEE2E6>phone-menu.yml version: <gradient:#908DC2:#A5A2CB>{phonemenuversion}</gradient></color>'
+    - '<color:#DEE2E6>contacts-menu.yml version: <gradient:#908DC2:#A5A2CB>{contactsmenuversion}</gradient></color>'
+    - '<color:#DEE2E6>contact-detail-menu.yml version: <gradient:#908DC2:#A5A2CB>{contactdetailmenuversion}</gradient></color>'
+    - '<color:#DEE2E6>Authors: <gradient:#908DC2:#A5A2CB>{pluginauthors}</gradient></color>'
+    - ''
+  config-reloaded: '{prefix} <color:#50FA7B>Plugin configuration successfully reloaded.</color>'
+  already-in-call: '{prefix} <color:#FF5555>You are already in a call. End the current call first.</color>'
+  block-use: '{prefix} <color:#DEE2E6>Usage: <color:#FFB86C>/block <number or nickname></color></color>'
+  unblock-use: '{prefix} <color:#DEE2E6>Usage: <color:#FFB86C>/unblock <number or nickname></color></color>'
+  call-accepted: '{prefix} <color:#DEE2E6>Player <color:#FFB86C>{playernick}</color> accepted your call.</color>'
+  call-canceled: '{prefix} <color:#6272A4>Call declined.</color>'
+  click-to-copy: <color:#908DC2><italic>Click to copy</italic></color>
+  call-ended: '{prefix} <color:#6272A4>Call ended.</color>'
+  call-myself: '{prefix} <color:#FF5555>You cannot call yourself.</color>'
+  call-not-answered: '{prefix} <color:#FF5555>Call ended. The recipient did not answer.</color>'
+  call-you-not-answered: '{prefix} <color:#FF5555>Call ended. You did not answer the call.</color>'
+  call-started: '{prefix} <color:#50FA7B>Conversation started with <color:#FFB86C>{number}</color>.</color>'
+  call-start: '{prefix} <color:#50FA7B>Connection established with <color:#FFB86C>{number}</color>.</color>'
+  call-usage: '{prefix} <color:#DEE2E6>Usage: <color:#FFB86C>/call <number></color> or <color:#FFB86C>/call <contact name></color></color>'
+  calling: '{prefix} <color:#DEE2E6>Ringing <color:#FFB86C>{playernick}</color>...</color>'
+  contact-added: '{prefix} <color:#50FA7B>Contact <color:#FFB86C>"{name}"</color> ({number}) successfully added.</color>'
+  contact-already-exists: '{prefix} <color:#FF5555>A contact with number {number} is already in your address book.</color>'
+  contact-myself: '{prefix} <color:#FF5555>You cannot add your own number to contacts.</color>'
+  contact-deleted: '{prefix} <color:#50FA7B>Contact successfully removed from memory.</color>'
+  contact-use: '{prefix} <color:#DEE2E6>Usage: <color:#FFB86C>/contact <phone number></color></color>'
+  contact-storage-full: '{prefix} <color:#FF5555>Contact storage is full. Delete old numbers.</color>'
+  debited-money: '{prefix} <color:#DEE2E6><color:#50FA7B>{money}</color> has been deducted from your balance.</color>'
+  incoming-call: |-
+    {prefix} <color:#DEE2E6>You are receiving a call from <color:#FFB86C>{playernick}</color>.
+    {prefix} Use <color:#50FA7B>/accept</color> to answer or <color:#FF5555>/cancel</color> to reject.</color>
+  line-busy: '{prefix} <color:#FF5555>The line is busy. Please try again later.</color>'
+  no-permission: '{prefix} <color:#FF5555>You do not have enough permission to execute this command.</color>'
+  no-phone: '{prefix} <color:#FF5555>No mobile phone was found in your inventory!</color>'
+  no-calling: '{prefix} <color:#FF5555>You have no active incoming or outgoing calls.</color>'
+  no-money: '{prefix} <color:#FF5555>You do not have enough funds on your account to perform this action.</color>'
+  not-in-call: '{prefix} <color:#FF5555>You are not in a conversation.</color>'
+  number-not-found: '{prefix} <color:#FF5555>The specified number or contact does not exist.</color>'
+  only-players: '{prefix} <color:#FF5555>This command is only available in-game.</color>'
+  messages-use: '{prefix} <color:#DEE2E6>Usage: <color:#FFB86C>/msg <number/nickname> <text></color></color>'
+  messages-format-target: '{prefix} <color:#6272A4>[</color><color:#FFB86C>{number}</color><color:#6272A4>]</color> <color:#908DC2>{playernick}</color><color:#DEE2E6> » {message}</color>'
+  messages-format-sender: '{prefix} <color:#908DC2>You</color><color:#DEE2E6> » {message}</color>'
+  messages-failed: '{prefix} <color:#FF5555>Network failure. Could not deliver SMS to number {number}.</color>'
+  messages-delivered: '{prefix} <color:#DEE2E6>Message successfully delivered to number <color:#FFB86C>{number}</color>.</color>'
+  phone-usage:
+    - ''
+    - '<color:#DEE2E6>Available smartphone commands:</color>'
+    - ''
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone give [player]</color> <color:#6272A4>—</color> <color:#DEE2E6>give a phone to a player</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone give</color> <color:#6272A4>—</color> <color:#DEE2E6>get a phone for yourself</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone remove [player]</color> <color:#6272A4>—</color> <color:#DEE2E6>remove a phone from a player</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone remove</color> <color:#6272A4>—</color> <color:#DEE2E6>remove your own phone</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone version</color> <color:#6272A4>—</color> <color:#DEE2E6>plugin information</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone reload</color> <color:#6272A4>—</color> <color:#DEE2E6>reload the configuration</color>'
+    - ''
+  phone-given: '{prefix} <color:#DEE2E6>The device has been successfully added to your inventory.</color>'
+  phone-drop-prevented: '{prefix} <color:#FF5555>You cannot drop your smartphone!</color>'
+  phone-move-prevented: '{prefix} <color:#FF5555>You cannot put the phone into another container!</color>'
+  phone-removed: '{prefix} <color:#50FA7B>Phone removed.</color>'
+  phone-removed-from-player: '{prefix} <color:#50FA7B>Phone removed from player <color:#FFB86C>{playernick}</color>.</color>'
+  select-call-function: '{prefix} <color:#50FA7B>Call is being processed. Please wait for the rings...</color>'
+  phone-given-to-player: '{prefix} <color:#50FA7B>Smartphone successfully given to player <color:#FFB86C>{playernick}</color>.</color>'
+  phone-required: '{prefix} <color:#FF5555>You need to take out your phone for this action.</color>'
+  player-already-blocked: '{prefix} <color:#FF5555>The subscriber with number <color:#FFB86C>{playernumber}</color> is already on the blacklist.</color>'
+  player-already-in-call: '{prefix} <color:#FF5555>The line is busy. Subscriber <color:#FFB86C>{number}</color> is already in another conversation.</color>'
+  player-already-unblocked: '{prefix} <color:#DEE2E6>Number <color:#FFB86C>{playernumber}</color> is not in the blacklist.</color>'
+  player-blocked: '{prefix} <color:#50FA7B>Player <color:#FFB86C>{playernick}</color> has been successfully added to the blacklist.</color>'
+  player-not-found: '{prefix} <color:#FF5555>Subscriber <color:#FFB86C>{number}</color> is unavailable or outside network coverage.</color>'
+  player-not-in-contacts: '{prefix} <color:#DEE2E6>Player <color:#FFB86C>{playernick}</color> was not found in your phone book.</color>'
+  player-number: '<color:#DEE2E6>Your phone number:'
+  player-offline: '{prefix} <color:#FF5555>The connection was lost. The subscriber left the network.</color>'
+  player-unblocked: '{prefix} <color:#50FA7B>Number <color:#FFB86C>{playernick}</color> successfully removed from the blacklist.</color>'
+
+phone:
+  title: '<color:#A5A2CB>Smartphone</color>'
+  lore:
+    - ''
+    - '<color:#6272A4> &m                                             &r '
+    - ''
+    - ' <color:#DEE2E6>Status: <color:#50FA7B>● Online</color></color>'
+    - ' <color:#DEE2E6>Number: <color:#FFB86C>{number}</color></color>'
+    - ''
+    - ' <color:#908DC2><italic>Controls:</italic></color>'
+    - ' <color:#6272A4>»</color> <color:#DEE2E6>Press <color:#FFB86C>RMB</color> or <color:#FFB86C>LMB</color>,</color>'
+    - '   <color:#DEE2E6>to open the interface</color>'
+    - ''
+    - '<color:#6272A4> &m                                             &r '
+    - ''
+
+settings:
+  economy:
+    enabled: true
+    messageCost: 0.5
+    callCost: 1.0

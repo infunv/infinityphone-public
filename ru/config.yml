@@ -1,0 +1,179 @@
+# =================================================================================
+#                      КОНФИГУРАЦИОННЫЙ ФАЙЛ INFINITYPHONES (config.yml)
+#                                     Версия: 1.3.0
+# =================================================================================
+#
+# # УВЕДОМЛЕНИЕ О EULA И ЛИЦЕНЗИИ
+#
+# Это программное обеспечение и его ресурсы защищены законом об авторском праве.
+# Устанавливая, запуская или настраивая этот плагин, вы соглашаетесь с EULA:
+#
+# 1. ПРОГРАММА (Java-бинарник / .jar):
+#    - Скомпилированная Java-программа является строго ПРОПРИЕТАРНОЙ и ЗАКРЫТОЙ.
+#    - Вам разрешено запускать бинарный .jar на вашем сервере для личного
+#      или публичного некоммерческого использования на Minecraft-сервере.
+#    - Реверс-инжиниринг, декомпиляция или модификация бинарного файла ЗАПРЕЩЕНЫ.
+#    - Распространение, перепродажа или передача по сублицензии строго ЗАПРЕЩЕНЫ.
+#
+# 2. РЕСУРСЫ (ресурс-пак / 3D-модели / текстуры):
+#    - Ресурс-пак размещён публично (github.com/infunv/infinityphone-public)
+#      для интеграции на стороне сервера.
+#    - Коммерческая монетизация, продажа моделей или извлечение для сторонних паков
+#      строго ЗАПРЕЩЕНЫ.
+#
+# По вопросам коммерческого лицензирования обращайтесь: contact@infunv.ru
+#
+# =================================================================================
+# БЫСТРЫЙ СТАРТ И РУКОВОДСТВО ДЛЯ ИГРОКОВ
+#
+# ШАГ 1: Как получить смартфон
+#   - Администраторы могут выдать смартфон командой: /phone give [player]
+#   - Или получить его себе командой: /phone give
+#   - Чтобы удалить телефон у себя или у игрока, используйте: /phone remove [player]
+#
+# ШАГ 2: Открытие интерфейса
+#   - Возьмите смартфон в основную руку и нажмите правой кнопкой мыши (RMB) или левой кнопкой мыши (LMB).
+#   - Откроется главное GUI-меню смартфона.
+#
+# ШАГ 3: Проверка номера телефона
+#   - В главном меню наведите курсор на голову игрока в центре.
+#   - Там отображается ваш уникальный, автоматически сгенерированный номер телефона.
+#   - Вы можете нажать на голову, чтобы скопировать номер в буфер обмена!
+#
+# ШАГ 4: Управление адресной книгой (Телефонной книгой)
+#   - Нажмите на иконку книжной полки ("Телефонная книга"), чтобы открыть список контактов.
+#   - Чтобы добавить контакт, введите в чат: /contact <number>
+#   - Контакт будет добавлен в вашу книгу!
+#   - Чтобы заблокировать игрока (добавить в чёрный список), используйте: /block <number|nickname>
+#   - Чтобы разблокировать его, используйте: /unblock <number|nickname>
+#
+# ШАГ 5: Совершение звонков
+#   - Откройте профиль контакта в Телефонной книге и нажмите на блок из изумруда ("Начать звонок").
+#   - Или выполните: /call <number|nickname>
+#   - Получатель получит уведомление о входящем звонке.
+#   - Чтобы ответить, получатель должен ввести: /accept
+#   - Чтобы отклонить, получатель должен ввести: /cancel
+#   - Чтобы завершить активный звонок, любой игрок может ввести: /quit (или нажать на редстоун в GUI).
+#
+# ШАГ 6: Отправка сообщений (SMS)
+#   - Введите: /msg <number|nickname> <text message>
+#   - Получатель мгновенно получит ваше SMS в пользовательском формате.
+#
+# =================================================================================
+# Плейсхолдеры
+#
+# {prefix} - Префикс плагина
+# {playernick} - Имя/ник игрока
+# {playernumber} - Номер телефона игрока
+# {contactnumber} - Номер телефона целевого контакта
+# {contactname} - Имя целевого контакта
+# {number} - Общий плейсхолдер для номера/имени
+# {message} - Текст SMS-сообщения
+# {money} - Стоимость в формате валюты
+#
+# =================================================================================
+
+version: 1.3.0
+
+prefix: '<gradient:#908DC2:#A5A2CB>InfinityPhones</gradient> <color:#6272A4>»</color>'
+
+messages:
+  version:
+    - ''
+    - '<color:#DEE2E6>Информация о плагине <gradient:#908DC2:#A5A2CB>{pluginname}</gradient>:</color>'
+    - ''
+    - '<color:#DEE2E6>Версия плагина: <gradient:#908DC2:#A5A2CB>{pluginversion}</gradient></color>'
+    - '<color:#DEE2E6>Версия config.yml: <gradient:#908DC2:#A5A2CB>{configversion}</gradient></color>'
+    - '<color:#DEE2E6>Версия phone-menu.yml: <gradient:#908DC2:#A5A2CB>{phonemenuversion}</gradient></color>'
+    - '<color:#DEE2E6>Версия contacts-menu.yml: <gradient:#908DC2:#A5A2CB>{contactsmenuversion}</gradient></color>'
+    - '<color:#DEE2E6>Версия contact-detail-menu.yml: <gradient:#908DC2:#A5A2CB>{contactdetailmenuversion}</gradient></color>'
+    - '<color:#DEE2E6>Авторы: <gradient:#908DC2:#A5A2CB>{pluginauthors}</gradient></color>'
+    - ''
+  config-reloaded: '{prefix} <color:#50FA7B>Конфигурация плагина успешно перезагружена.</color>'
+  already-in-call: '{prefix} <color:#FF5555>Вы уже находитесь в разговоре. Сначала завершите текущий звонок.</color>'
+  block-use: '{prefix} <color:#DEE2E6>Использование: <color:#FFB86C>/block <number or nickname></color></color>'
+  unblock-use: '{prefix} <color:#DEE2E6>Использование: <color:#FFB86C>/unblock <number or nickname></color></color>'
+  call-accepted: '{prefix} <color:#DEE2E6>Игрок <color:#FFB86C>{playernick}</color> принял ваш звонок.</color>'
+  call-canceled: '{prefix} <color:#6272A4>Звонок отклонён.</color>'
+  click-to-copy: <color:#908DC2><italic>Нажмите, чтобы скопировать</italic></color>
+  call-ended: '{prefix} <color:#6272A4>Звонок завершён.</color>'
+  call-myself: '{prefix} <color:#FF5555>Вы не можете позвонить себе.</color>'
+  call-not-answered: '{prefix} <color:#FF5555>Звонок завершён. Получатель не ответил.</color>'
+  call-you-not-answered: '{prefix} <color:#FF5555>Звонок завершён. Вы не ответили на звонок.</color>'
+  call-started: '{prefix} <color:#50FA7B>Разговор начат с <color:#FFB86C>{number}</color>.</color>'
+  call-start: '{prefix} <color:#50FA7B>Соединение установлено с <color:#FFB86C>{number}</color>.</color>'
+  call-usage: '{prefix} <color:#DEE2E6>Использование: <color:#FFB86C>/call <number></color> или <color:#FFB86C>/call <contact name></color></color>'
+  calling: '{prefix} <color:#DEE2E6>Идёт вызов <color:#FFB86C>{playernick}</color>...</color>'
+  contact-added: '{prefix} <color:#50FA7B>Контакт <color:#FFB86C>"{name}"</color> ({number}) успешно добавлен.</color>'
+  contact-already-exists: '{prefix} <color:#FF5555>Контакт с номером {number} уже есть в вашей адресной книге.</color>'
+  contact-myself: '{prefix} <color:#FF5555>Вы не можете добавить свой собственный номер в контакты.</color>'
+  contact-deleted: '{prefix} <color:#50FA7B>Контакт успешно удалён из памяти.</color>'
+  contact-use: '{prefix} <color:#DEE2E6>Использование: <color:#FFB86C>/contact <phone number></color></color>'
+  contact-storage-full: '{prefix} <color:#FF5555>Хранилище контактов заполнено. Удалите старые номера.</color>'
+  debited-money: '{prefix} <color:#DEE2E6><color:#50FA7B>{money}</color> было списано с вашего баланса.</color>'
+  incoming-call: |-
+    {prefix} <color:#DEE2E6>Вам звонит <color:#FFB86C>{playernick}</color>.
+    {prefix} Используйте <color:#50FA7B>/accept</color>, чтобы ответить, или <color:#FF5555>/cancel</color>, чтобы отклонить.</color>
+  line-busy: '{prefix} <color:#FF5555>Линия занята. Пожалуйста, попробуйте позже.</color>'
+  no-permission: '{prefix} <color:#FF5555>У вас недостаточно прав для выполнения этой команды.</color>'
+  no-phone: '{prefix} <color:#FF5555>В вашем инвентаре не найден мобильный телефон!</color>'
+  no-calling: '{prefix} <color:#FF5555>У вас нет активных входящих или исходящих звонков.</color>'
+  no-money: '{prefix} <color:#FF5555>На вашем счёте недостаточно средств для выполнения этого действия.</color>'
+  not-in-call: '{prefix} <color:#FF5555>Вы не находитесь в разговоре.</color>'
+  number-not-found: '{prefix} <color:#FF5555>Указанный номер или контакт не существует.</color>'
+  only-players: '{prefix} <color:#FF5555>Эта команда доступна только в игре.</color>'
+  messages-use: '{prefix} <color:#DEE2E6>Использование: <color:#FFB86C>/msg <number/nickname> <text></color></color>'
+  messages-format-target: '{prefix} <color:#6272A4>[</color><color:#FFB86C>{number}</color><color:#6272A4>]</color> <color:#908DC2>{playernick}</color><color:#DEE2E6> » {message}</color>'
+  messages-format-sender: '{prefix} <color:#908DC2>Вы</color><color:#DEE2E6> » {message}</color>'
+  messages-failed: '{prefix} <color:#FF5555>Сбой сети. Не удалось доставить SMS на номер {number}.</color>'
+  messages-delivered: '{prefix} <color:#DEE2E6>Сообщение успешно доставлено на номер <color:#FFB86C>{number}</color>.</color>'
+  phone-usage:
+    - ''
+    - '<color:#DEE2E6>Доступные команды смартфона:</color>'
+    - ''
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone give [player]</color> <color:#6272A4>—</color> <color:#DEE2E6>выдать телефон игроку</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone give</color> <color:#6272A4>—</color> <color:#DEE2E6>получить телефон себе</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone remove [player]</color> <color:#6272A4>—</color> <color:#DEE2E6>удалить телефон у игрока</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone remove</color> <color:#6272A4>—</color> <color:#DEE2E6>удалить свой телефон</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone version</color> <color:#6272A4>—</color> <color:#DEE2E6>информация о плагине</color>'
+    - ' <color:#6272A4>»</color> <color:#FFB86C>/phone reload</color> <color:#6272A4>—</color> <color:#DEE2E6>перезагрузить конфигурацию</color>'
+    - ''
+  phone-given: '{prefix} <color:#DEE2E6>Устройство успешно добавлено в ваш инвентарь.</color>'
+  phone-drop-prevented: '{prefix} <color:#FF5555>Вы не можете выбросить свой смартфон!</color>'
+  phone-move-prevented: '{prefix} <color:#FF5555>Вы не можете положить телефон в другой контейнер!</color>'
+  phone-removed: '{prefix} <color:#50FA7B>Телефон удалён.</color>'
+  phone-removed-from-player: '{prefix} <color:#50FA7B>Телефон удалён у игрока <color:#FFB86C>{playernick}</color>.</color>'
+  select-call-function: '{prefix} <color:#50FA7B>Звонок обрабатывается. Пожалуйста, подождите гудков...</color>'
+  phone-given-to-player: '{prefix} <color:#50FA7B>Смартфон успешно выдан игроку <color:#FFB86C>{playernick}</color>.</color>'
+  phone-required: '{prefix} <color:#FF5555>Для этого действия вам нужно достать телефон.</color>'
+  player-already-blocked: '{prefix} <color:#FF5555>Абонент с номером <color:#FFB86C>{playernumber}</color> уже находится в чёрном списке.</color>'
+  player-already-in-call: '{prefix} <color:#FF5555>Линия занята. Абонент <color:#FFB86C>{number}</color> уже разговаривает с другим собеседником.</color>'
+  player-already-unblocked: '{prefix} <color:#DEE2E6>Номер <color:#FFB86C>{playernumber}</color> отсутствует в чёрном списке.</color>'
+  player-blocked: '{prefix} <color:#50FA7B>Игрок <color:#FFB86C>{playernick}</color> успешно добавлен в чёрный список.</color>'
+  player-not-found: '{prefix} <color:#FF5555>Абонент <color:#FFB86C>{number}</color> недоступен или вне зоны сети.</color>'
+  player-not-in-contacts: '{prefix} <color:#DEE2E6>Игрок <color:#FFB86C>{playernick}</color> не найден в вашей телефонной книге.</color>'
+  player-number: '<color:#DEE2E6>Ваш номер телефона:'
+  player-offline: '{prefix} <color:#FF5555>Соединение потеряно. Абонент покинул сеть.</color>'
+  player-unblocked: '{prefix} <color:#50FA7B>Номер <color:#FFB86C>{playernick}</color> успешно удалён из чёрного списка.</color>'
+
+phone:
+  title: '<color:#A5A2CB>Смартфон</color>'
+  lore:
+    - ''
+    - '<color:#6272A4> &m                                             &r '
+    - ''
+    - ' <color:#DEE2E6>Статус: <color:#50FA7B>● Онлайн</color></color>'
+    - ' <color:#DEE2E6>Номер: <color:#FFB86C>{number}</color></color>'
+    - ''
+    - ' <color:#908DC2><italic>Управление:</italic></color>'
+    - ' <color:#6272A4>»</color> <color:#DEE2E6>Нажмите <color:#FFB86C>ПКМ</color> или <color:#FFB86C>ЛКМ</color>,</color>'
+    - '   <color:#DEE2E6>чтобы открыть интерфейс</color>'
+    - ''
+    - '<color:#6272A4> &m                                             &r '
+    - ''
+
+settings:
+  economy:
+    enabled: true
+    messageCost: 0.5
+    callCost: 1.0

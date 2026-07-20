@@ -1,0 +1,68 @@
+version: 1.0.0
+title: "<gradient:#00B135:#00B135>Контакт: {playernick}</gradient>"
+size: 27
+buttons:
+  call:
+    slot: 10
+    material: EMERALD_BLOCK
+    title: "<color:#50FA7B>Начать звонок</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Нажмите, чтобы совершить</color>'
+      - ' <color:#DEE2E6>голосовой звонок абоненту.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  endcall:
+    slot: 10
+    material: REDSTONE_BLOCK
+    title: "<color:#FF5555>Завершить звонок</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Нажмите, чтобы разорвать</color>'
+      - ' <color:#DEE2E6>текущее соединение.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  info:
+    slot: 12
+    material: PAPER
+    title: "<color:#DEE2E6>Карточка абонента</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Имя: <color:#908DC2>{playernick}</color></color>'
+      - ' <color:#DEE2E6>Номер: <color:#FFB86C>{number}</color></color>'
+      - ' <color:#DEE2E6>Сеть: {playerstatus}</color>'
+      - ' <color:#DEE2E6>Статус в чёрном списке: {numberblacklist}</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  delete:
+    slot: 14
+    material: COAL
+    title: "<color:#FF5555>Удалить контакт</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Навсегда удалить номер</color>'
+      - ' <color:#DEE2E6>из памяти устройства.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  block:
+    slot: 16
+    material: BARRIER
+    title: "<color:#FF5555>Заблокировать</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Добавить в чёрный список.</color>'
+      - ' <color:#DEE2E6>Игрок не сможет вам звонить.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  unblock:
+    slot: 16
+    material: HONEYCOMB
+    title: "<color:#50FA7B>Разблокировать</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Удалить из чёрного списка.</color>'
+      - ' <color:#DEE2E6>Восстановить доступ к звонкам.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  back:
+    slot: 18
+    material: RED_WOOL
+    title: "<color:#908DC2>« Назад</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>В предыдущее меню</color>'
+      - '<color:#6272A4>─────────────────────────</color>'

@@ -14,6 +14,12 @@ This public repository serves as the central hub for hosting and distributing pu
 
 ---
 
+## Issues and Feature Requests
+
+This repository serves as the **official and exclusive** channel for submitting bug reports, issues, and feature requests related to the InfinityPhones plugin. All feedback should be directed to the [Issues](../../issues) section of this repository. Please ensure that your report includes sufficient detail (e.g., steps to reproduce, server version, relevant logs) to facilitate efficient handling. While we welcome suggestions for improvements, we reserve the right to prioritize features based on our development roadmap. For urgent or commercial inquiries, please contact us through the official support links provided above.
+
+---
+
 ## License & Usage Terms
 
 All contents of this repository and the associated plugin binaries are governed by the official **InfinityPhones Software & Assets License (EULA)**:

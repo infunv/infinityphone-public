@@ -1,0 +1,22 @@
+version: 1.0.0
+title: "<gradient:#00B135:#00B135>Phone</gradient>"
+size: 9
+items:
+  profile:
+    slot: 4
+    # The item can be configured as PLAYER_HEAD in code so the owner's head is displayed
+    title: "<gradient:#908DC2:#A5A2CB>{playernick}</gradient>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Device owner</color>'
+      - ' <color:#DEE2E6>Your number: <color:#FFB86C>{number}</color></color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  contacts:
+    slot: 8
+    material: BOOKSHELF
+    title: "<color:#FFB86C>Phone Book</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Click to <color:#908DC2>open</color></color>'
+      - ' <color:#DEE2E6>your contact list.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'

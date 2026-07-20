@@ -1,0 +1,68 @@
+version: 1.0.0
+title: "<gradient:#00B135:#00B135>Contact: {playernick}</gradient>"
+size: 27
+buttons:
+  call:
+    slot: 10
+    material: EMERALD_BLOCK
+    title: "<color:#50FA7B>Start Call</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Click to place a</color>'
+      - ' <color:#DEE2E6>voice call to the subscriber.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  endcall:
+    slot: 10
+    material: REDSTONE_BLOCK
+    title: "<color:#FF5555>End Call</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Click to break the</color>'
+      - ' <color:#DEE2E6>current connection.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  info:
+    slot: 12
+    material: PAPER
+    title: "<color:#DEE2E6>Subscriber Card</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Name: <color:#908DC2>{playernick}</color></color>'
+      - ' <color:#DEE2E6>Number: <color:#FFB86C>{number}</color></color>'
+      - ' <color:#DEE2E6>Network: {playerstatus}</color>'
+      - ' <color:#DEE2E6>Blacklist status: {numberblacklist}</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  delete:
+    slot: 14
+    material: COAL
+    title: "<color:#FF5555>Delete Contact</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Permanently erase the number</color>'
+      - ' <color:#DEE2E6>from the device memory.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  block:
+    slot: 16
+    material: BARRIER
+    title: "<color:#FF5555>Block</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Add to the blacklist.</color>'
+      - ' <color:#DEE2E6>The player will not be able to call you.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  unblock:
+    slot: 16
+    material: HONEYCOMB
+    title: "<color:#50FA7B>Unblock</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Remove from the blacklist.</color>'
+      - ' <color:#DEE2E6>Restore call access.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  back:
+    slot: 18
+    material: RED_WOOL
+    title: "<color:#908DC2>« Go Back</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>To the previous menu</color>'
+      - '<color:#6272A4>─────────────────────────</color>'

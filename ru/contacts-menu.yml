@@ -1,0 +1,29 @@
+version: 1.0.0
+title: "<gradient:#00B135:#00B135>Список контактов</gradient>"
+size: 54
+status:
+  online: "<color:#50FA7B>● Онлайн</color>"
+  offline: "<color:#6272A4>○ Оффлайн</color>"
+  blocked: "<color:#FF5555>Заблокирован</color>"
+  unblocked: "<color:#50FA7B>Активен</color>"
+contact-item:
+  title: "<color:#FFB86C>{playernick}</color>"
+  lore:
+    - '<color:#6272A4>─────────────────────────</color>'
+    - ' <color:#DEE2E6>Номер: <color:#908DC2>{number}</color></color>'
+    - ' <color:#DEE2E6>Статус: {playerstatus}</color>'
+    - ' <color:#DEE2E6>Доступ: {numberblacklist}</color>'
+    - ''
+    - ' <color:#A5A2CB><italic>Нажмите для взаимодействия</italic></color>'
+    - '<color:#6272A4>─────────────────────────</color>'
+back-button:
+  slot: 49
+  material: RED_WOOL
+  title: "<color:#908DC2>« Главное меню</color>"
+  lore:
+    - '<color:#6272A4>─────────────────────────</color>'
+    - ' <color:#DEE2E6>Закрыть адресную книгу</color>'
+    - '<color:#6272A4>─────────────────────────</color>'
+filler:
+  material: BLACK_STAINED_GLASS_PANE
+  title: " "

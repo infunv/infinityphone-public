@@ -1,0 +1,22 @@
+version: 1.0.0
+title: "<gradient:#00B135:#00B135>Телефон</gradient>"
+size: 9
+items:
+  profile:
+    slot: 4
+    # Элемент можно настроить как PLAYER_HEAD в коде, чтобы отображалась голова владельца
+    title: "<gradient:#908DC2:#A5A2CB>{playernick}</gradient>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Владелец устройства</color>'
+      - ' <color:#DEE2E6>Ваш номер: <color:#FFB86C>{number}</color></color>'
+      - '<color:#6272A4>─────────────────────────</color>'
+  contacts:
+    slot: 8
+    material: BOOKSHELF
+    title: "<color:#FFB86C>Телефонная книга</color>"
+    lore:
+      - '<color:#6272A4>─────────────────────────</color>'
+      - ' <color:#DEE2E6>Нажмите, чтобы <color:#908DC2>открыть</color></color>'
+      - ' <color:#DEE2E6>список ваших контактов.</color>'
+      - '<color:#6272A4>─────────────────────────</color>'
